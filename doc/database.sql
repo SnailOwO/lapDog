@@ -1,0 +1,98 @@
+﻿set names utf8;
+
+-- log 
+DROP TABLE IF EXISTS `log`;
+CREATE TABLE log(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	wx_user_id INT NOT NULL DEFAULT 0 COMMENT 'weixin_user_profie id', 
+	action VARCHAR(32) NOT NULL DEFAULT '' COMMENT 'LOGIN:登录,START_LAP:开舔,CLOSE_LAP:关舔',
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- tasks
+DROP TABLE IF EXISTS `tasks`;
+CREATE TABLE tasks(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	task_name VARCHAR(60) NOT NULL DEFAULT '' COMMENT '任务名称',
+	task_desc TEXT COMMENT '备注',
+	status TINYINT(1) NOT NULL DEFAULT 0 COMMENT '0:下线 1:上线',
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 每日任务完成情况
+DROP TABLE IF EXISTS `daily_task`;
+CREATE TABLE daily_task(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	tasks_id INT NOT NULL DEFAULT 0 COMMENT 'tasks_id',
+	open_id VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'weixin openid',
+	wx_user_id INT NOT NULL DEFAULT 0 COMMENT 'weixin_user_profie id', 
+	is_finsh TINYINT(1) NOT NULL DEFAULT 0 COMMENT '0:未完成 1:已完成',
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- weixin_user_profie
+DROP TABLE IF EXISTS `weixin_user_profile`;
+CREATE TABLE weixin_user_profile(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	open_id VARCHAR(255) NOT NULL DEFAULT '' COMMENT 'weixin openid',
+	nickName VARCHAR(100) NOT NULL DEFAULT '' COMMENT '微信用户nickname',
+	avatarUrl TEXT COMMENT '微信用户头像',
+	gender tinyint(1) NOT NULL DEFAULT 1 COMMENT '0:女,1:男',
+	country VARCHAR(255) NOT NULL DEFAULT '' COMMENT '国家',
+	city VARCHAR(120) NOT NULL DEFAULT '' COMMENT '城市',
+	province VARCHAR(120) NOT NULL DEFAULT '' COMMENT '省份',
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- options
+DROP TABLE IF EXISTS `options`; 
+CREATE TABLE options(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	content TEXT COMMENT '反馈意见内容',
+	is_read TINYINT(1) DEFAULT 0 COMMENT '0:未读 1:已读'
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 预定义的舔狗语录
+DROP TABLE IF EXISTS `lap_words`; 
+CREATE TABLE lap_words(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	word TEXT COMMENT '舔狗语句',
+	status TINYINT(1) DEFAULT 0 COMMENT '0:下线 1:在线'
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 用户提交的舔狗语录
+DROP TABLE IF EXISTS `custom_lap_words`; 
+CREATE TABLE custom_lap_words(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	wx_user_id INT NOT NULL DEFAULT 0 COMMENT 'weixin_user_profie id', 
+	word TEXT COMMENT '舔狗语句',
+	status TINYINT(1) DEFAULT 0 COMMENT '0:废弃 1:预定义通过 2:成功加入'
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- chat room
+DROP TABLE IF EXISTS `chat_room`;
+CREATE TABLE chat_room(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	users_id TEXT COMMENT 'chat room users ,隔开',
+	room_name VARCHAR(64) NOT NULL DEFAULT 'lap dog' COMMENT '目前默认是系统生成(预留字段)',
+	type tinyint(1) NOT NULL DEFAULT 0 COMMENT '0:lapdog聊天室(预留字段)'
+	status  tinyint(1) NOT NULL DEFAULT 1 COMMENT '0:close 1:using 2: manual close' 
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- chat room records
+DROP TABLE IF EXISTS `chat_room_records`;
+CREATE TABLE chat_room_records(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	chat_room_id INT NOT NULL DEFAULT 0 COMMENT 'chat_room id',
+	wx_user_id INT NOT NULL DEFAULT 0 COMMENT 'weixin_user_profie id', 
+	content TEXT COMMENT 'record',
+	create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+	
