@@ -13,6 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// 无需token验证
+Route::group([],function ($router) {
+    // login
+    $router->post('wxLogin', 'User\UserController@wxLogin');
 });
+
+// 需要token验证
+Route::get('/', function () {
+    // return view('welcome');
+    echo 'cc';
+});
+

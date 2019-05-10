@@ -1,0 +1,32 @@
+[2019-05-09 05:53:42] NULL.INFO: >>>>>>>>
+GET /sns/jscode2session?access_token=21_TpY97tVgCuUcM0rEBEP0wKydGWQ1_RsZjXdBcCBDTwqpfjbGo4uPATsUKeT7cNKljbl2BU1WU5TblE8xHpJZ6-d4XyeaghcAqSIIV-h1Ghd1GIzP8bi5FdojSrZJHP42wmLq2bAmMth6ne70RDEhACAVHI&appid=wx85ea3bc3a11df403&secret=550c60c48eed62327dd9c2a076b2f61f&js_code=001ixvkt0e6cng1Gfglt0P3Akt0ixvkE&grant_type=authorization_code HTTP/1.1
+Host: api.weixin.qq.com
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.2.18-1+ubuntu16.04.1+deb.sury.org+1
+
+
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: text/plain
+Date: Thu, 09 May 2019 05:53:42 GMT
+Content-Length: 82
+
+{"session_key":"9uMF9qLgOrHESj1K8LJjag==","openid":"oL8fE5AQ6Ll9reH3pr9hPa6mhjMQ"}
+--------
+NULL  
+[2019-05-09 05:54:07] NULL.INFO: >>>>>>>>
+GET /sns/jscode2session?access_token=21_TpY97tVgCuUcM0rEBEP0wKydGWQ1_RsZjXdBcCBDTwqpfjbGo4uPATsUKeT7cNKljbl2BU1WU5TblE8xHpJZ6-d4XyeaghcAqSIIV-h1Ghd1GIzP8bi5FdojSrZJHP42wmLq2bAmMth6ne70RDEhACAVHI&appid=wx85ea3bc3a11df403&secret=550c60c48eed62327dd9c2a076b2f61f&js_code=071ArIZE0RmI8d28l5ZE0ZuTZE0ArIZe&grant_type=authorization_code HTTP/1.1
+Host: api.weixin.qq.com
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.2.18-1+ubuntu16.04.1+deb.sury.org+1
+
+
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: text/plain
+Date: Thu, 09 May 2019 05:54:07 GMT
+Content-Length: 82
+
+{"session_key":"9uMF9qLgOrHESj1K8LJjag==","openid":"oL8fE5AQ6Ll9reH3pr9hPa6mhjMQ"}
+--------
+NULL  
