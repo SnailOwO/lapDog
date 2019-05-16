@@ -43,7 +43,7 @@ return [
 
         'api' => [
             'driver' => 'passport',
-            'provider' => 'users',
+            'provider' => 'wechat',
             'hash' => false,
         ],
     ],
@@ -66,9 +66,9 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'wechat' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\WeixinUserProfile::class,
         ],
 
         // 'users' => [

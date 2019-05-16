@@ -1121,6 +1121,86 @@
         ]
     },
     {
+        "name": "hhxsv5/laravel-s",
+        "version": "v3.5.0",
+        "version_normalized": "3.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hhxsv5/laravel-s.git",
+            "reference": "61648189e14c0c774945420f5ad4a75d8675ea2a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hhxsv5/laravel-s/zipball/61648189e14c0c774945420f5ad4a75d8675ea2a",
+            "reference": "61648189e14c0c774945420f5ad4a75d8675ea2a",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "ext-json": "*",
+            "ext-pcntl": "*",
+            "php": ">=5.5.9",
+            "symfony/console": ">=2.7.0"
+        },
+        "suggest": {
+            "ext-inotify": "Inotify, used to reload all worker processes when your code is modified.",
+            "ext-swoole": "Event-driven asynchronous & concurrent & coroutine networking engine with high performance for PHP, require >= 1.7.19."
+        },
+        "time": "2019-05-10T08:30:20+00:00",
+        "bin": [
+            "bin/fswatch"
+        ],
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Hhxsv5\\LaravelS\\Illuminate\\LaravelSServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hhxsv5\\LaravelS\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Xie Biao",
+                "email": "hhxsv5@sina.com"
+            }
+        ],
+        "description": "🚀LaravelS is a glue that is used to quickly integrate Swoole into Laravel or Lumen and then give them better performance and more possibilities.",
+        "homepage": "https://github.com/hhxsv5/laravel-s",
+        "keywords": [
+            "async",
+            "coroutine",
+            "http",
+            "inotify",
+            "laravel",
+            "laravel-s",
+            "lumen",
+            "performance",
+            "process",
+            "server",
+            "swoole",
+            "task",
+            "tcp",
+            "timer",
+            "udp",
+            "websocket"
+        ]
+    },
+    {
         "name": "jakub-onderka/php-console-color",
         "version": "v0.2",
         "version_normalized": "0.2.0.0",
@@ -1226,17 +1306,17 @@
     },
     {
         "name": "laravel/framework",
-        "version": "v5.8.16",
-        "version_normalized": "5.8.16.0",
+        "version": "v5.8.17",
+        "version_normalized": "5.8.17.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/framework.git",
-            "reference": "83d57f9f9162ab476c43b9ec00d463ff12c578fd"
+            "reference": "33c04dd2a431adeeb49926a4f2b20590cc033ca2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/framework/zipball/83d57f9f9162ab476c43b9ec00d463ff12c578fd",
-            "reference": "83d57f9f9162ab476c43b9ec00d463ff12c578fd",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/33c04dd2a431adeeb49926a4f2b20590cc033ca2",
+            "reference": "33c04dd2a431adeeb49926a4f2b20590cc033ca2",
             "shasum": "",
             "mirrors": [
                 {
@@ -1345,7 +1425,7 @@
             "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^1.1).",
             "wildbit/swiftmailer-postmark": "Required to use Postmark mail driver (^3.0)."
         },
-        "time": "2019-05-07T14:37:11+00:00",
+        "time": "2019-05-14T16:02:41+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -3311,17 +3391,17 @@
     },
     {
         "name": "phpunit/phpunit",
-        "version": "7.5.9",
-        "version_normalized": "7.5.9.0",
+        "version": "7.5.11",
+        "version_normalized": "7.5.11.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/phpunit.git",
-            "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160"
+            "reference": "64cb33f5b520da490a7b13149d39b43cf3c890c6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/134669cf0eeac3f79bc7f0c793efbc158bffc160",
-            "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/64cb33f5b520da490a7b13149d39b43cf3c890c6",
+            "reference": "64cb33f5b520da490a7b13149d39b43cf3c890c6",
             "shasum": "",
             "mirrors": [
                 {
@@ -3366,7 +3446,7 @@
             "ext-xdebug": "*",
             "phpunit/php-invoker": "^2.0"
         },
-        "time": "2019-04-19T15:50:46+00:00",
+        "time": "2019-05-14T04:53:02+00:00",
         "bin": [
             "phpunit"
         ],
@@ -4802,92 +4882,6 @@
         ]
     },
     {
-        "name": "swooletw/laravel-swoole",
-        "version": "v2.6.6",
-        "version_normalized": "2.6.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/swooletw/laravel-swoole.git",
-            "reference": "768465bfa8835975bf924486e82d67ed998cd65a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/swooletw/laravel-swoole/zipball/768465bfa8835975bf924486e82d67ed998cd65a",
-            "reference": "768465bfa8835975bf924486e82d67ed998cd65a",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "illuminate/console": "~5.4",
-            "illuminate/contracts": "~5.4",
-            "illuminate/http": "~5.4",
-            "illuminate/support": "~5.4",
-            "php": "^7.2",
-            "predis/predis": "^1.1"
-        },
-        "require-dev": {
-            "codedungeon/phpunit-result-printer": "^0.14.0",
-            "laravel/lumen-framework": "~5.4",
-            "mockery/mockery": "~1.0",
-            "php-coveralls/php-coveralls": "^2.1",
-            "php-mock/php-mock": "^2.0",
-            "phpunit/php-code-coverage": "^6.1",
-            "phpunit/phpunit": "^7.5"
-        },
-        "time": "2019-04-20T14:35:43+00:00",
-        "type": "library",
-        "extra": {
-            "laravel": {
-                "providers": [
-                    "SwooleTW\\Http\\LaravelServiceProvider"
-                ],
-                "aliases": {
-                    "Server": "SwooleTW\\Http\\Server\\Facades\\Server",
-                    "Table": "SwooleTW\\Http\\Server\\Facades\\Table",
-                    "Room": "SwooleTW\\Http\\Websocket\\Facades\\Room",
-                    "Websocket": "SwooleTW\\Http\\Websocket\\Facades\\Websocket"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "src/Server/helpers.php"
-            ],
-            "psr-4": {
-                "SwooleTW\\Http\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Huang Yi",
-                "email": "coodeer@163.com"
-            },
-            {
-                "name": "Albert Chen",
-                "email": "albert@unisharp.com"
-            }
-        ],
-        "description": "High performance HTTP server based on Swoole. Speed up your Laravel and Lumen applications.",
-        "keywords": [
-            "http",
-            "laravel",
-            "lumen",
-            "performance",
-            "server",
-            "swoole"
-        ]
-    },
-    {
         "name": "symfony/cache",
         "version": "v4.2.8",
         "version_normalized": "4.2.8.0",
@@ -5054,17 +5048,17 @@
     },
     {
         "name": "symfony/contracts",
-        "version": "v1.0.2",
-        "version_normalized": "1.0.2.0",
+        "version": "v1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/contracts.git",
-            "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf"
+            "reference": "d3636025e8253c6144358ec0a62773cae588395b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/contracts/zipball/1aa7ab2429c3d594dd70689604b5cf7421254cdf",
-            "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf",
+            "url": "https://api.github.com/repos/symfony/contracts/zipball/d3636025e8253c6144358ec0a62773cae588395b",
+            "reference": "d3636025e8253c6144358ec0a62773cae588395b",
             "shasum": "",
             "mirrors": [
                 {
@@ -5078,20 +5072,23 @@
         },
         "require-dev": {
             "psr/cache": "^1.0",
-            "psr/container": "^1.0"
+            "psr/container": "^1.0",
+            "symfony/polyfill-intl-idn": "^1.10"
         },
         "suggest": {
             "psr/cache": "When using the Cache contracts",
             "psr/container": "When using the Service contracts",
             "symfony/cache-contracts-implementation": "",
+            "symfony/event-dispatcher-implementation": "",
+            "symfony/http-client-contracts-implementation": "",
             "symfony/service-contracts-implementation": "",
             "symfony/translation-contracts-implementation": ""
         },
-        "time": "2018-12-05T08:06:11+00:00",
+        "time": "2019-04-27T14:29:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.0-dev"
+                "dev-master": "1.1-dev"
             }
         },
         "installation-source": "dist",

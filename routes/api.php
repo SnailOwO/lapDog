@@ -18,14 +18,20 @@ use Illuminate\Http\Request;
 // });
 
 // 无需token验证
-Route::group([],function ($router) {
+Route::group([], function ($router) {
     // login
     $router->post('wxLogin', 'User\UserController@wxLogin');
 });
+
+Route::group(['middleware' => 'auth:api'], function ($router) {
+    // login
+    // $router->post('wxLogin', 'User\UserController@wxLogin');
+    $router->post('demo', 'User\UserController@demo');
+});
+
 
 // 需要token验证
 Route::get('/', function () {
     // return view('welcome');
     echo 'cc';
 });
-

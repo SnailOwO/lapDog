@@ -132,7 +132,7 @@ return [
 
     'mini_config' => [
         'app_id' => 'wx85ea3bc3a11df403',
-        'secret' => '550c60c48eed62327dd9c2a076b2f61f',   //550c60c48eed62327dd9c2a076b2f61f
+        'secret' => '',   //550c60c48eed62327dd9c2a076b2f61f
         // 下面为可选项
         // 指定 API 调用返回结果的类型：array(default)/collection/object/raw/自定义类名
         'response_type' => 'array',
