@@ -26,7 +26,7 @@ Route::group([], function ($router) {
 Route::group(['middleware' => 'auth:api'], function ($router) {
     // login
     // $router->post('wxLogin', 'User\UserController@wxLogin');
-    $router->post('demo', 'User\UserController@demo');
+    $router->get('demo', 'User\UserController@demo');
 });
 
 

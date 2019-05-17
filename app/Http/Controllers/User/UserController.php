@@ -51,12 +51,15 @@ class UserController extends Controller {
         }
         // 发放token
         // $user = Auth::user();
+        // $user = auth('api')->setUser($result);
         $wx_user_info['token'] = $result->createToken('lapDog')->accessToken;
         return $wx_user_info;
     }
 
     public function demo(Request $request) {
-        dd('cc');
-        return $request->all();
+        // dd('cc');
+        // return $request->all();
+        $user = auth('api')->user();
+        dd($user);
     }
 }
